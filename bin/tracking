@@ -1,0 +1,54 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use League\CLImate\CLImate;
+use LWI\DeliveryTracker\Command\BaseCommand;
+
+$climate = new CLImate;
+$climate->arguments->add([
+    'command' => [
+        'description'   => 'Command name.',
+    ],
+]);
+
+$climate->arguments->parse();
+$commandName = $climate->arguments->get('command');
+
+// Find proper command
+$command = null;
+foreach (new DirectoryIterator('src/Command') as $fileInfo) {
+    if($fileInfo->isDot()) continue;
+
+    $namespace = 'LWI\\DeliveryTracker\Command\\'.$fileInfo->getBasename('.php');
+
+    $reflectionClass = new ReflectionClass($namespace);
+    if (!$reflectionClass->IsInstantiable()) {
+        continue;
+    }
+
+    $command = new $namespace;
+
+    /** @var BaseCommand $command */
+    $command->configure();
+
+    if ($command->getName() == $commandName) {
+        break;
+    }
+
+    $command = null;
+}
+
+if ($command == null) {
+    $climate->error(sprintf('Command \'%s\' not found', $commandName));
+    return;
+}
+
+$climate->arguments->add($command->getArgumentsDefinition());
+$climate->arguments->parse();
+
+$arguments = $climate->arguments->toArray();
+unset($arguments['command']);
+
+$command->execute($climate, $arguments);
