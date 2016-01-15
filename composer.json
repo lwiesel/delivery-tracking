@@ -1,0 +1,43 @@
+{
+    "name": "lwiesel/delivery-tracking",
+    "description": "A framework agnostic delivery tracking library for PHP 5.4+",
+    "keywords": [
+        "lwiesel",
+        "delivery-tracking"
+    ],
+    "homepage": "https://github.com/lwiesel/delivery-tracking",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Laurent Wiesel",
+            "email": "wiesel.laurent@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php" : ">=5.4.0"
+    },
+
+    "require-dev": {
+        "league/climate": "^3.2",
+        "m6web/coke": "^2.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "LWI\\DeliveryTracker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LWI\\DeliveryTracker\\Test\\": "tests/"
+        }
+    },
+
+    "config": {
+        "bin-dir": "bin"
+    },
+
+    "bin": ["bin/tracking"]
+}
