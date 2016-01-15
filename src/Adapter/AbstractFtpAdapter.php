@@ -574,14 +574,6 @@ abstract class AbstractFtpAdapter
         return $this->systemType;
     }
 
-//    /**
-//     * @inheritdoc
-//     */
-//    public function listContents($directory = '', $recursive = false)
-//    {
-//        return $this->listDirectoryContents($directory, $recursive);
-//    }
-
     /**
      * Normalize a directory listing.
      *
@@ -776,40 +768,4 @@ abstract class AbstractFtpAdapter
         };
         return array_filter($list, $filter);
     }
-
-//    /**
-//     * @inheritdoc
-//     */
-//    public function has($path)
-//    {
-//        return $this->getMetadata($path);
-//    }
-//
-//    /**
-//     * @inheritdoc
-//     */
-//    public function getSize($path)
-//    {
-//        return $this->getMetadata($path);
-//    }
-//
-//    /**
-//     * @inheritdoc
-//     */
-//    public function getVisibility($path)
-//    {
-//        return $this->getMetadata($path);
-//    }
-//
-//    /**
-//     * Ensure a directory exists.
-//     *
-//     * @param string $dirname
-//     */
-//    public function ensureDirectory($dirname)
-//    {
-//        if (! empty($dirname) && !$this->has($dirname)) {
-//            $this->createDir($dirname, new Config());
-//        }
-//    }
 }

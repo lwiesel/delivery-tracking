@@ -82,7 +82,7 @@ class ChronopostAdapter implements DeliveryServiceInterface
                     $this->getStateFromCode(trim($event->code))
                 );
 
-                if ($lastEvent == null || $lastEvent->getEventDate() < $currentEvent->getEventDate()) {
+                if ($lastEvent === null || $lastEvent->getEventDate() < $currentEvent->getEventDate()) {
                     $lastEvent = $currentEvent;
                 }
             }

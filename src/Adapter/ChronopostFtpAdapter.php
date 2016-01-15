@@ -242,7 +242,7 @@ class ChronopostFtpAdapter extends AbstractFtpAdapter implements DeliveryService
             }
         }
 
-        if ($lastUnreadFile == null) {
+        if ($lastUnreadFile === null) {
             $this->throwDataNotFoundException();
         }
 
