@@ -17,10 +17,9 @@ class ChronopostAdapter implements DeliveryServiceInterface
 {
     use ExceptionThrower, ChronopostCodesTransformer;
 
-    const BASE_URL = 'https://www.chronopost.fr/tracking-cxf/TrackingServiceWS/trackSkybill?'
-        .'language=fr_FR'
-        .'&skybillNumber=%s'
-    ;
+    const BASE_URL = <<<'EOT'
+https://www.chronopost.fr/tracking-cxf/TrackingServiceWS/trackSkybill?language=fr_FR&skybillNumber=%s
+EOT;
 
     /**
      * @param string $trackingNumber

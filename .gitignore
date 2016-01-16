@@ -1,4 +1,6 @@
 bin/*
 !bin/tracking
-vendor/
+vendor
 composer.lock
+coverage
+coverage.clover
