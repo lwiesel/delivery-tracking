@@ -1,9 +1,9 @@
 <?php
 
-namespace LWI\DeliveryTracker\Behavior;
+namespace LWI\DeliveryTracking\Behavior;
 
-use LWI\DeliveryTracker\Exception\DataNotFoundException;
-use LWI\DeliveryTracker\Exception\UnsupportedFeatureException;
+use LWI\DeliveryTracking\Exception\DataNotFoundException;
+use LWI\DeliveryTracking\Exception\UnsupportedFeatureException;
 
 /**
  * Class ExceptionThrower

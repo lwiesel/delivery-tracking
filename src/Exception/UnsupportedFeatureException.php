@@ -1,6 +1,6 @@
 <?php
 
-namespace LWI\DeliveryTracker\Exception;
+namespace LWI\DeliveryTracking\Exception;
 
 use \Exception;
 

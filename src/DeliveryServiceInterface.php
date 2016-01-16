@@ -1,6 +1,6 @@
 <?php
 
-namespace LWI\DeliveryTracker;
+namespace LWI\DeliveryTracking;
 
 /**
  * Interface DeliveryServiceInterface

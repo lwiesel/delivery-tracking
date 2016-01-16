@@ -1,6 +1,6 @@
 <?php
 
-namespace LWI\DeliveryTracker\Adapter;
+namespace LWI\DeliveryTracking\Adapter;
 
 abstract class AbstractFtpAdapter
 {

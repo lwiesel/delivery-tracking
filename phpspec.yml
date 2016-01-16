@@ -1,0 +1,13 @@
+---
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+
+code_coverage:
+    format: clover
+    output: coverage.clover
+
+suites:
+    event_suite:
+        namespace: LWI\DeliveryTracking
+        psr4_prefix: LWI\DeliveryTracking
+formatter.name: pretty

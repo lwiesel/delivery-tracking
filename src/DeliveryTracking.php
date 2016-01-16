@@ -1,6 +1,6 @@
 <?php
 
-namespace LWI\DeliveryTracker;
+namespace LWI\DeliveryTracking;
 
 /**
  * Class DeliveryTracking
@@ -52,6 +52,11 @@ class DeliveryTracking
         return $this->deliveryService->getLastEvent($trackingNumber);
     }
 
+
+    /**
+     * @param $reference
+     * @return string
+     */
     public function getTrackingNumberByInternalReference($reference)
     {
         return $this->deliveryService->getTrackingNumberByInternalReference($reference);

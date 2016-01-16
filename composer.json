@@ -20,18 +20,21 @@
     },
 
     "require-dev": {
+        "henrikbjorn/phpspec-code-coverage": "~1.0",
         "league/climate": "^3.2",
-        "m6web/coke": "^2.1"
+        "m6web/coke": "^2.1",
+        "phpspec/phpspec": "^2.4",
+        "scrutinizer/ocular": "~1.1"
     },
 
     "autoload": {
         "psr-4": {
-            "LWI\\DeliveryTracker\\": "src/"
+            "LWI\\DeliveryTracking\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LWI\\DeliveryTracker\\Test\\": "tests/"
+            "LWI\\DeliveryTracking\\Test\\": "tests/"
         }
     },
 

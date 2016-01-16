@@ -1,8 +1,8 @@
 <?php
 
-namespace LWI\DeliveryTracker\Behavior;
+namespace LWI\DeliveryTracking\Behavior;
 
-use LWI\DeliveryTracker\DeliveryStatus;
+use LWI\DeliveryTracking\DeliveryStatus;
 
 trait ChronopostCodesTransformer
 {

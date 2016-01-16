@@ -4,7 +4,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use League\CLImate\CLImate;
-use LWI\DeliveryTracker\Command\BaseCommand;
+use LWI\DeliveryTracking\Command\BaseCommand;
 
 $climate = new CLImate;
 $climate->arguments->add([
@@ -21,7 +21,7 @@ $command = null;
 foreach (new DirectoryIterator('src/Command') as $fileInfo) {
     if($fileInfo->isDot()) continue;
 
-    $namespace = 'LWI\\DeliveryTracker\Command\\'.$fileInfo->getBasename('.php');
+    $namespace = 'LWI\\DeliveryTracking\Command\\'.$fileInfo->getBasename('.php');
 
     $reflectionClass = new ReflectionClass($namespace);
     if (!$reflectionClass->IsInstantiable()) {
