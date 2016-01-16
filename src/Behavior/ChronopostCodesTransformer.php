@@ -13,8 +13,6 @@ trait ChronopostCodesTransformer
      */
     protected function getStateFromCode($code)
     {
-        $state = null;
-
         switch ($code) {
             case 'D':
             case 'D1':
