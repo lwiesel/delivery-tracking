@@ -17,6 +17,13 @@ trait ChronopostCodesTransformer
             case 'D':
             case 'D1':
             case 'D2':
+            case 'RG':
+            case 'DD':
+            case 'B':
+            case 'U':
+            case 'VC':
+            case 'RI':
+            case 'RR':
                 $state = DeliveryStatus::stateDelivered();
                 break;
 
