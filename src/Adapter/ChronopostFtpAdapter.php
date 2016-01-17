@@ -77,7 +77,7 @@ class ChronopostFtpAdapter extends AbstractFtpAdapter implements DeliveryService
      *
      * @var int
      */
-    protected $depth = 7 * 24;
+    protected $depth = 168;// 1 week
 
     /**
      * ChronopostFtpAdapter constructor.
